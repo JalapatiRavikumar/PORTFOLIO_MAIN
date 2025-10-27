@@ -1,4 +1,4 @@
-import React, { useEffect, memo } from "react";
+import { useEffect, memo } from "react";
 import { Briefcase, Calendar, TrendingUp, Zap, BarChart3, Settings } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -69,6 +69,9 @@ const ExperienceCard = memo(() => (
     </div>
   </div>
 ));
+
+// give memo'd component a displayName to satisfy eslint/react/display-name
+ExperienceCard.displayName = "ExperienceCard";
 
 const ExperiencePage = () => {
   useEffect(() => {
